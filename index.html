@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/291707f091.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Easy Image Editor</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="no_preview.png" />
+</head>
+<body>
+    <div class="container disable">
+        <h2>Easy Image Editor</h2>
+        <div class="wrapper">
+            <div class="editor_panel">
+                <div class="filter">
+                    <label class="title">Filters</label>
+                    <div class="options">
+                        <button id="brightness" class="active">Brightness</button>
+                        <button id="saturation">Saturation</button>
+                        <button id="inversion">Inversion</button>
+                        <button id="grayscale">Grayscale</button>
+                    </div>
+                    <div class="slider">
+                        <div class="filter_info">
+                            <p class="name">Brightness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <div class="rotate">
+                    <label class="title">Rotate & Flip</label>
+                    <button id="left"><i class="fas fa-arrow-left"></i></button>
+                    <button id="right"><i class="fas fa-arrow-right"></i></button>
+                    <button id="horizontal"><i class="fas fa-ellipsis-h"></i></button>
+                    <button id="vertical"><i class="fas fa-ellipsis-v"></i></button>
+                </div>
+            </div>
+            <div class="preview_img">
+                <img src="choose_img.jpg" alt="preview_img">
+            </div>
+        </div>
+        <div class="controls">
+            <button class="reset_filter">Reset Filters</button>
+            <div class="row">
+                <input type="file" class="file_input" accept="image/*" hidden>
+                <button class="choose_img">Choose Image</button>
+                <button class="save_img">Save Image</button>
+            </div>
+        </div>
+    </div>
+        
+    <script src="script.js"></script>
+</body>
+</html>
